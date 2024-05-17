@@ -150,14 +150,9 @@ html,body{
     padding: 10vw 5vw;
     padding-left: 30vw;
 }
-#imageabout {
-    width: 150px;
-    height: 130px;
+#imageabout img{
+    border: 2px 2px solid white;
     border-radius: 50%;
-    background-image: url(https://i.pinimg.com/originals/cb/81/d9/cb81d9e52b4f730a6b5c2f326407b0ac.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 #textabout{
     color: white;
