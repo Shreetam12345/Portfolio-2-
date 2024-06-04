@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>New Project</title>
+        <title>Portfolio Website</title>
         <link
             href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
             rel="stylesheet" />
@@ -26,7 +26,7 @@
                         <div class="bounding">
                         <div class="blocktext">
                             <h1 id="second" class="boundingelem">DESIGNER</h1>
-                            <h6 class="boundingelem">BASED IN BHUBANESWAR</h6>
+                            <h6 class="boundingelem">BASED 0N BHUBANESWAR</h6>
                         </div>
                         </div>
                         </div>
@@ -52,18 +52,19 @@
                 </div>
             </div>
             <div id="secondpage">
+                <div id="projectheading"><h3>My Projects</h3></div>
                 <div class="elem">
                     <!-- <img src="./desktop-wallpaper-tony-stark-discovers-a-new-element-scene-arc-reactor-iron-man-2-ultra.jpg" alt="ironman"> -->
-                    <h1>YT MRH</h1>
+                    <a href="#">YT MRH</a>
                     <h6>2024</h6>
                 </div>
                 <div class="elem">
                     <!-- <img src="./iron-man-tony-stark-robert-downey-jr-wallpaper-preview.jpg" alt="ironman"> -->
-                    <h1>DTM APPL.</h1><h6>2024</h6>
+                    <a href="#">TRAVEL TRACKER</a><h6>2024</h6>
                 </div>
                 <div class="elem">
                     <!-- <img src="./tony-stark-iron-man-iron-man-3-glowing-wallpaper-preview.jpg" alt="ironman"> -->
-                    <h1>NOTE KEEPER</h1><h6>2024</h6>
+                    <a href="#">NOTE KEEPER</a><h6>2024</h6>
                 </div>
             </div>
             <div id="about">
@@ -78,8 +79,8 @@
             </div>
             <div id="subscribe">
                 <h5>(FORGOT TO MENTION)</h5>
-                <h3>SUBSCRIBE TO MY YOUTUBE CHANNEL<i
-                        class="ri-arrow-right-up-line"></i></h3>
+                <a href="#" class="resume">HERE IS MY RESUME<i
+                        class="ri-arrow-right-up-line"></i></a>
             </div>
             <div id="footer">
                 <div id="footerleft">
@@ -103,5 +104,24 @@
         <script
             src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
         <script src="script1.js"></script>
-    </body>
+
+
+
+
+
+
+
+        <script>  document.addEventListener('DOMContentLoaded', (event) => {
+            let observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        aboutpageanime();
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            observer.observe(document.querySelector('#about'));
+        });</script>
+        </body>
 </html>

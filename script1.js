@@ -36,31 +36,32 @@ function firstpageanime() {
 }
 circlemousefollower();
 firstpageanime();
-document.querySelectorAll(".elem").forEach(function(elem){
-    var rotate=0;
-    var diffrot=0;
-    elem.addEventListener("mouseleave",function(dets){
-        gsap.to(elem.querySelector("img"),{
-            opacity: 0,
-            ease: Power3,
-        });
+// document.querySelectorAll(".elem").forEach(function(elem){
+//     var rotate=0;
+//     var diffrot=0;
+//     elem.addEventListener("mouseleave",function(dets){
+//         gsap.to(elem.querySelector("img"),{
+//             opacity: 0,
+//             ease: Power3,
+//         });
 
-    });
+//     });
 
-    elem.addEventListener("mousemove",function(dets){
-        var diff = dets.clientY - elem.getBoundingClientRect().top;
-        diffrot=dets.clientX - rotate;
-        rotate=dtes.clientX;
-        gsap.to(elem.querySelector("img"),{
-            opacity: 1,
-            ease: Power3,
-            top: diff,
-            left: dets.clientX,
-            rotate:gsap.utils.clamp(-20,20,diffrot*0.6)
-        });
+//     elem.addEventListener("mousemove",function(dets){
+//         var diff = dets.clientY - elem.getBoundingClientRect().top;
+//         diffrot=dets.clientX - rotate;
+//         rotate=dtes.clientX;
+//         gsap.to(elem.querySelector("img"),{
+//             opacity: 1,
+//             ease: Power3,
+//             top: diff,
+//             left: dets.clientX,
+//             rotate:gsap.utils.clamp(-20,20,diffrot*0.6)
+//         });
 
-    });
-});
+//     });
+// });
+
 
 function updateClock() {
     const now = new Date();
@@ -77,3 +78,23 @@ setInterval(updateClock, 1000);
 
 // Initial call to display the clock immediately
 updateClock();
+
+
+function aboutpageanime() {
+    gsap.timeline()
+        .from("#imageabout", { 
+            x: "-100%", 
+            opacity: 0, 
+            duration: 1.5,
+            ease: "power3.out"
+        }, 0)  // Start at the same time (time offset = 0)
+        .from("#textabout", { 
+            x: "100%", 
+            opacity: 0, 
+            duration: 1.5,
+            ease: "power3.out"
+        }, 0); // Start at the same time (time offset = 0)
+}
+aboutpageanime();
+
+
